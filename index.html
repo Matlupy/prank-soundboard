@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prank Soundboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Prank Soundboard 📢</h1>
+        
+        <div class="grid">
+            <button class="btn airhorn" onclick="playSound('airhorn')">
+                <span>📣</span> Airhorn
+            </button>
+            
+            <button class="btn fart" onclick="playSound('fart')">
+                <span>💨</span> Fart
+            </button>
+            
+            <button class="btn siren" onclick="playSound('siren')">
+                <span>🚨</span> Siren
+            </button>
+            
+            <button class="btn boo" onclick="playSound('boo')">
+                <span>👎</span> Boo
+            </button>
+            
+            <button class="btn drumroll" onclick="playSound('drumroll')">
+                <span>🥁</span> Drumroll
+            </button>
+        </div>
+    </div>
+
+    <!-- Audio Files: Replace 'src' with your actual file paths -->
+    <audio id="airhorn" src="sounds/airhorn.mp3"></audio>
+    <audio id="fart" src="sounds/fart.mp3"></audio>
+    <audio id="siren" src="sounds/siren.mp3"></audio>
+    <audio id="boo" src="sounds/boo.mp3"></audio>
+    <audio id="drumroll" src="sounds/drumroll.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

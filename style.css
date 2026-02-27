@@ -1,0 +1,79 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2c3e50; /* Dark Blue Background */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    letter-spacing: 1px;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    /* Responsive columns: fits as many 150px columns as possible */
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
+    gap: 20px;
+}
+
+/* Button Styles */
+.btn {
+    border: none;
+    border-radius: 15px;
+    padding: 30px 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 6px 0 rgba(0,0,0,0.2); /* 3D effect */
+}
+
+.btn span {
+    font-size: 2rem; /* Emoji size */
+}
+
+/* Button Press Effect */
+.btn:active {
+    transform: translateY(6px); /* Moves down */
+    box-shadow: none; /* Removes shadow to look flat */
+}
+
+/* Individual Colors */
+.airhorn { background-color: #e74c3c; } /* Red */
+.fart    { background-color: #f1c40f; color: #333; } /* Yellow */
+.siren   { background-color: #3498db; } /* Blue */
+.boo     { background-color: #9b59b6; } /* Purple */
+.drumroll{ background-color: #2ecc71; } /* Green */
+
+/* Mobile Tweaks */
+@media (max-width: 400px) {
+    h1 { font-size: 2rem; }
+    .grid { grid-template-columns: 1fr 1fr; } /* Force 2 columns on very small screens */
+}
